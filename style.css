@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1e2425;
+    color: #ffffff;
+}
+
+html {
+    font-family: inter, sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    background-color: #023E55;
+    min-width: 375px;
+    (max-width: 690px);
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.719);
+}
+
+.logo {
+    .logohome {
+        color: aqua;
+        font-family: teko;
+        font-size: 2.5rem;
+        padding: rem rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.fontemenucurriculo {
+    color: aqua;
+    font-family: teko;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.fontemenuservicos {
+    color: aqua;
+    font-family: teko;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.fontemenucontatos {
+    color: aqua;
+    font-family: teko;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.github {
+    font-size: 2rem;
+    color: yellow;
+    font-weight: 600;
+    font-family: teko;
+}
+
+.conteudo-container {
+    min-width: 375px;
+    max-width: 1920px;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.conteudopp {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero,
+.hero2,
+.hero3,
+.hero4,
+.servicos,
+.contato,
+.github2,
+.curriculo {
+    background: #023E55;
+    max-width: 1120px;
+    height: 85vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: clip;
+    padding: 1rem 2rem;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.719);
+}
+
+.fontebemvindo {
+    color: aqua;
+    font-family: teko;
+    font-size: 4rem;
+}
+
+
+.conteudo1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.conteudo12 {
+    width: 60%;
+    display: block;
+}
+
+
+.fontequemsoueu,
+.fonteplanosfuturos {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+
+.fotoprincipal>img {
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.fontehobbiesehab {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.tabelarobbiehabilidade {
+    background: #ffffff;
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    margin: auto;
+    border-radius: 1rem;
+    color: black;
+
+}
+
+.hero-imagens-container {
+    max-width: 100%;
+    column-count: 5;
+    margin: 0.5rem;
+    gap: 1rem;
+}
+
+.hero-imagens-container>figure {
+    max-width: 65%;
+}
+
+.hero-imagens-container>figure>img {
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
+.hero-imagens-container>video {
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
+
+.fontevidaacademica {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.fontemateriasdafacul {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.materias {
+    display: list-item;
+}
+
+
+
+.fontemeugh {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.linkgh {
+    color: yellow;
+}
+
+.ghimg>img {
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+
+
+.fontecurriculo {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.curriculoimg>img {
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+
+
+
+.fonteservicos {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.conteudoservicos {
+    min-width: 300px;
+    max-width: 690px;
+    background: #ffffff;
+    height: 50vh;
+    width: 50%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    margin: auto;
+    border-radius: 1rem;
+    color: black;
+}
+
+
+
+
+.fontecontato {
+    color: aqua;
+    font-family: teko;
+    font-size: 3rem;
+}
+
+.conteudocontato {
+    min-width: 300px;
+    max-width: 690px;
+    background: #ffffff;
+    height: 40vh;
+    width: 50%;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 2rem;
+    margin: auto;
+    border-radius: 1rem;
+    color: black;
+}
+
+
+.botaocontainer {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    transform: translate("0, 50%");
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aqua;
+}
+
+.footer {
+    background: #023E55;
+    height: 10vh;
+    font-size: 1rem;
+    color: yellow;
+    margin: auto;
+    padding: 1rem 7.1rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.719);
+}
+
+@media screen and (max-width:690px) {
+
+    nav {
+        background-position: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        display: inline;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo {
+        .logohome {
+            color: aqua;
+            font-family: teko;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+    }
+
+    .fontebemvindo {
+        font-size: 3rem;
+    }
+
+    .fontequemsoueu,
+    .fonteplanosfuturos,
+    .fontehobbiesehab,
+    .fontevidaacademica,
+    .fontemateriasdafacul{
+        font-size: 2.5rem;
+    }
+
+    .fotoprincipal>img {
+        width: 60%;
+        border-radius: 1rem;
+    }
+
+    .conteudo1 {
+        width: 100%;
+        flex-direction: column;
+        margin: -0.5rem;
+        padding: 1rem;
+    }
+
+    .conteudo12 {
+        width: 110%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-imagens-container {
+        max-width: 100%;
+        column-count: 4;
+        margin: 1.5rem;
+    }
+
+    .hero-imagens-container>figure>img {
+        width: 130%;
+    }
+    
+    .hero-imagens-container>video {
+        width: 190%;
+    }
+
+    .hero,
+    .hero2,
+    .hero4 {
+        height: 140vh;
+        width: 98%;
+    }
+
+    .tabelarobbiehabilidade{
+        height: 60vh;
+        width: 100%;
+    }
+    }
+
+
+    .hero3,
+    .github2,
+    .curriculo {
+        height: 60vh;
+        width: 98%;
+    }
+
+    .ghimg>img {
+        min-width: 300px;
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .curriculoimg>img {
+        min-width: 300px;
+        max-width: 450px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .servicos,
+    .contato {
+        height: 100vh;
+        width: 98%;
+    }
+
+    .conteudoservicos {
+        min-width: 300px;
+        max-width: 690px;
+        height: 60vh;
+        width: 100%;
+    }
+
+    .conteudocontato {
+        min-width: 300px;
+        max-width: 690px;
+        height: 85vh;
+        width: 100%;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
