@@ -8,14 +8,15 @@
     <meta name="description" content="Meu Landing Page">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <script src="js.js" type="text/JavaScript"></script>
 </head>
 <link rel="shortcut icon" href="./imagens/foto1.jpg" type="image/x-icon">
+
 <body class="conteudo-container">
-    <header>
+    <header class="headernav">
         <nav id="menu">
             <span class="logo"><a href="#home" class="logohome">Sobre mim</a></span>
             <ul class="menu">
-
                 <li><a href="#curriculo" class="fontemenucurriculo">Currículo</a></li>
                 <li><a href="#servicos" class="fontemenuservicos">Serviços</a></li>
                 <li><a href="#contato" class="fontemenucontatos">Contato</a></li>
@@ -24,7 +25,6 @@
         </nav>
     </header>
 
-    <hr>
     <br>
 
     <main class="conteudopp">
@@ -270,15 +270,11 @@
                 </tr>
             </table>
         </section>
-    </main>
-
-    <br>
-
-    <footer>
+        <br>
         <!-------contato----->
         <section class="contato" id="contato">
             <h2 class="fontecontato">Contato</h2>
-            <form action="envio-de-dados.php" method="POST" class="conteudocontato">
+            <form class="conteudocontato" onsubmit="(event); return false;">
                 <label for="nome">Nome completo:</label>
                 <input type="text" id="nome" name="nome" required><br><br>
                 <label for="telefone">Telefone:</label>
@@ -299,8 +295,8 @@
                     <option value="pagina-avancada">Página Avançada</option>
                 </select><br><br>
                 <label for="descricao">Descrição do serviço desejado:</label><br>
-                <textarea id="descricao" name="descricao" cols="30" rows="3" placeholder="Descreva aqui o seu projeto"
-                    readonly></textarea>
+                <textarea id="descricao" name="descricao" cols="30" rows="3"
+                    placeholder="Descreva aqui o seu projeto"></textarea>
                 <button type="submit">Enviar</button>
                 <br><br>
             </form>
@@ -311,12 +307,57 @@
                 <a href="#menu"><img src="./imagens/chevronupicon.png" alt="Icone do botão" width="40"></a>
             </button>
         </section>
+    </main>
+
+    <br>
+
+    <footer class="footer">
+        <p>By Hikaro Lázaro &reg;</p>
+        <p>Hikaro Lázaro &copy;</p>
     </footer>
+
+
+    <script>
+        // Scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Efeito de scroll nas seções
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function (event) {
+            // Pega o valor dos campos de input
+            const nome = document.getElementById('nome').value.trim();  // Obtém o valor do campo "nome", remove espaços extras.
+            const email = document.getElementById('email').value.trim();  // Obtém o valor do campo "email".
+            const telefone = document.getElementById('telefone').value.trim();  // Obtém o valor do campo "telefone".
+
+            // Verifica se algum campo está vazio
+            if (!nome || !email || !telefone) {
+                event.preventDefault();  // Impede que o formulário seja enviado
+                alert("Por favor, preencha todos os campos obrigatórios.");  // Exibe uma mensagem de erro
+                location.href = "./index.html"; //redireciona direto para o início da página 
+            } else {
+                alert("Mensagem enviada com sucesso!");  // Exibe uma mensagem de sucesso se todos os campos forem preenchidos
+            }
+        });
+    </script>
+
 </body>
-<br>
-<footer class="footer">
-    <p>By Hikaro Lázaro &reg;</p>
-    <p>Hikaro Lázaro &copy;</p>
-</footer>
 
 </html>
