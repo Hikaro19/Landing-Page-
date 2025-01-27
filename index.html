@@ -8,7 +8,7 @@
     <meta name="description" content="Meu Landing Page">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <script src="js.js" type="text/JavaScript"></script>
+    <script src="index.js"></script>
 </head>
 <link rel="shortcut icon" href="./imagens/foto1.jpg" type="image/x-icon">
 
@@ -223,7 +223,7 @@
 
         <section class="github2">
             <h2 class="fontemeugh">Meu GitHub</h2>
-            <div class="ghimg"><img src="./imagens/imggithub.png" alt="Imagem do meu Github"></div>
+            <div class="ghimg"><img src="./imagens/imggithub.png" alt="Imagem do meu Github"></div><br>
             <a href="https://github.com/Hikaro19" target="_blank" rel="next" class="linkgh">Clique aqui para
                 acessar</a>
         </section>
@@ -275,28 +275,34 @@
         <section class="contato" id="contato">
             <h2 class="fontecontato">Contato</h2>
             <form class="conteudocontato" onsubmit="(event); return false;">
-                <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" required><br><br>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required><br><br>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="tipo">Pessoa Física ou Jurídica:</label>
-                <select id="tipo" name="tipo">
-                    <option value="fisica">Física</option>
-                    <option value="juridica">Jurídica</option>
-                </select><br><br>
-                <label for="horario">Melhor horário de contato:</label>
-                <input type="text" id="horario" name="horario" required><br><br>
-                <label for="servico">Tipo de serviço:</label>
-                <select id="servico" name="servico">
-                    <option value="pagina-estatica">Página Estática</option>
-                    <option value="pagina-dinamica">Página Dinâmica</option>
-                    <option value="pagina-avancada">Página Avançada</option>
-                </select><br><br>
-                <label for="descricao">Descrição do serviço desejado:</label><br>
-                <textarea id="descricao" name="descricao" cols="30" rows="3"
-                    placeholder="Descreva aqui o seu projeto"></textarea>
+                <div class="ctt">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required><br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="tipo">Pessoa Física ou Jurídica:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="fisica">Física</option>
+                        <option value="juridica">Jurídica</option>
+                    </select><br><br>
+                    <label for="horario">Melhor horário de contato:</label>
+                    <input type="datetime-local" id="horario" name="horario" required><br><br>
+                    <label for="servico">Tipo de serviço:</label>
+                    <select id="servico" name="servico">
+                        <option value="pagina-estatica">Página Estática</option>
+                        <option value="pagina-dinamica">Página Dinâmica</option>
+                        <option value="pagina-avancada">Página Avançada</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="ctt3">
+                    <label for="descricao">Descrição do serviço desejado:</label><br>
+                    <textarea id="descricao" name="descricao" cols="30" rows="3"
+                        placeholder="Descreva aqui o seu projeto"></textarea>
+                </div>
                 <button type="submit">Enviar</button>
                 <br><br>
             </form>
@@ -315,7 +321,6 @@
         <p>By Hikaro Lázaro &reg;</p>
         <p>Hikaro Lázaro &copy;</p>
     </footer>
-
 
     <script>
         // Scroll suave
@@ -346,18 +351,16 @@
             const nome = document.getElementById('nome').value.trim();  // Obtém o valor do campo "nome", remove espaços extras.
             const email = document.getElementById('email').value.trim();  // Obtém o valor do campo "email".
             const telefone = document.getElementById('telefone').value.trim();  // Obtém o valor do campo "telefone".
-
             // Verifica se algum campo está vazio
             if (!nome || !email || !telefone) {
                 event.preventDefault();  // Impede que o formulário seja enviado
                 alert("Por favor, preencha todos os campos obrigatórios.");  // Exibe uma mensagem de erro
-                location.href = "./index.html"; //redireciona direto para o início da página 
+                location.href = "./index.html"; //redireciona direto para o início da página
             } else {
                 alert("Mensagem enviada com sucesso!");  // Exibe uma mensagem de sucesso se todos os campos forem preenchidos
             }
         });
     </script>
-
 </body>
 
 </html>
